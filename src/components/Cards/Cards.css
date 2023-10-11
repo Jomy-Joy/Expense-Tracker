@@ -1,0 +1,52 @@
+.expenses-list {
+    text-align: center;
+   
+}                      
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 20px;
+    flex-direction: row;
+    
+}                      
+.expense-card {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 250px;
+   
+
+}                       
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}                       
+.card-category {
+    font-weight: bold;
+}                       
+.card-amount {
+    margin: 10px 0;
+}
+
+.card-date {
+    color: #555;
+}
+
+.total {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 10px;
+}

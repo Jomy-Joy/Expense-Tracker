@@ -1,0 +1,42 @@
+.input-section {
+    display: flex;           
+    flex-direction: row;           
+    justify-content: center;          
+    align-items: center;           
+    padding: 10px;  
+    padding-top: 70px;
+    padding-bottom: 70px;
+            margin: 50px;  
+            background-color: rgb(219, 236, 236); 
+            border: 1px solid #ccc;
+                            border-radius: 5px;  
+    }
+.input-section label {
+        font-weight: bold;             
+        margin-right: 10px;  
+        margin-left: 10px;           
+        }
+.input-section input[type="number"], input-section input[type="date"] {
+ padding: 5px;      
+ margin-right: 10px; 
+ margin-left: 20px;   
+}
+.input-section button {
+padding: 5px 20px;   
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+margin-left: 10px;
+}
+@media (max-width: 768px){
+    .input-section{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .input-section label{
+        padding-bottom: 10px;
+    }
+
+}
