@@ -1,0 +1,13 @@
+.location-info-dialog {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .location-info-dialog p {
+    margin: 0;
+  }
