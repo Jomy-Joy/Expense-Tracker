@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Cards from "../Cards/Cards";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 
-function Layout(props) {
-  const { data,onDeleteExpense } = props;
+function Layout({expenses,setExpenses}) {
   
-  
-  //new
+
+  // Function to delete an expense by name
+  const deleteExpense = (expenseName) => {
+    const updatedExpenses = expenses.filter((expense) => expense.expenseName !== expenseName);
+    setExpenses(updatedExpenses);
+  };
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid
@@ -15,17 +19,16 @@ function Layout(props) {
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 2, sm: 8, md: 12 }}
       >
-        {data.map((item) => (
+        {expenses.map((item) => (
           <Grid item xs={2} sm={4} md={4} key={item.id}>
             <Cards
               name={item.expenseName}
-
               description={item.description}
               currency={item.currency}
               amount={item.amount}
               date={item.date}
-              deleteExpense={onDeleteExpense}
-
+              id={item.id}
+              onDelete={deleteExpense} // Pass the delete function
             />
           </Grid>
         ))}

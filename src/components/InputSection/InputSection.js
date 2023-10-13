@@ -39,14 +39,14 @@ function InputSection(props) {
       <div className="input-section">
         <label htmlFor="list">Expense Name</label>
         <input onChange={handleExpense} />
-		
+    
         <label htmlFor="amount-input">Amount: 
-		<select value={currency} onChange={(e) => setCurrency(e.target.value)}>
+    <select value={currency} onChange={(e) => setCurrency(e.target.value)}>
           <option value="INR">INR</option>
           <option value="AED">AED</option>
           <option value="JOD">JOD</option>
         </select>
-		</label>
+    </label>
         <input onChange={handleCurrency} />
         
 

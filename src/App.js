@@ -3,34 +3,33 @@ import sampledata from "./sample-data.json";
 import Header from "./components/Header/Header";
 import InputSection from "./components/InputSection/InputSection";
 import Layout from "./components/Layout/Layout";
-import TotalExpenseCard from "./components/TotalExpenseCard/TotalExpenseCard";
-import GreatestAmount from "./components/GreatestAmount/GreatestAmount";
 import React, { useState } from "react";
 import LocationInfoDialog from "./components/LocationInfoDialog/LocationInfoDialog";
+import { v4 as uuidv4 } from 'uuid';
+
 
 function App() {
   const [expenses, setExpenses] = useState(sampledata); //new
-  // Function to add a new expense
-  
+
 
   // Function to add a new expense
   const addExpense = (newExpense) => {
     setExpenses((prev)=>{
-      return( [...prev,newExpense]  )
+      return( [...prev,{...newExpense, id: uuidv4()}]  )
     });
   };
 
 
   
-  console.log(sampledata);
+  
+  console.log(expenses);
 
   return (
     <div className="App">
       <Header />
       <LocationInfoDialog/>
       <InputSection onAddExpense={addExpense} />
-      
-      <Layout data={expenses} />
+      <Layout expenses={expenses} setExpenses={setExpenses}/>
     </div>
   );
     }
